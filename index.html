@@ -1,7 +1,10 @@
 <!doctype>
 <html
     <head>
-        <style> img{cursor:pointer}</style>
+        <title>Click 2 play</title>        
+        <style>
+            img{cursor:pointer};            
+        </style>
         <script>
             (function(){
                 "strct mode";
@@ -28,7 +31,7 @@
                 }
                         
                 window.onload = function(){
-                    Player = document.getElementById('player');
+                    Player = getById('player');
                     
                     for(lName in ALBUM){
                         var lElem = getById(lName)
@@ -41,10 +44,12 @@
         </script>
     </head>
     <body> 
-        <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000032813631-5ypjfr-t300x300.jpg?e2f8ae2 id="assai">
-        <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000029722729-zdy3ey-t300x300.jpg?e2f8ae2 id="karandash">
-        <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000032203986-jpspit-original.jpg?e2f8ae2 id="remdigga">
-        <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000032795229-dswubs-original.jpg?e2f8ae2 id="kravc">
-        <iframe id="player" width="100%" height="450" scrolling="no" frameborder="no"></iframe>
+        <div class=covers>
+            <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000032813631-5ypjfr-t300x300.jpg?e2f8ae2 id="assai">
+            <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000029722729-zdy3ey-t300x300.jpg?e2f8ae2 id="karandash">
+            <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000032203986-jpspit-original.jpg?e2f8ae2 id="remdigga">
+            <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000032795229-dswubs-original.jpg?e2f8ae2 id="kravc">
+            <iframe id="player" width="100%" height="450" scrolling="no" frameborder="no"></iframe>
+        </div>
     </body>
 </html>
