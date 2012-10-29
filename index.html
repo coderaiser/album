@@ -1,0 +1,50 @@
+<!doctype>
+<html
+    <head>
+        <style> img{cursor:pointer}</style>
+        <script>
+            (function(){
+                "strct mode";
+                
+                var ALBUM = {
+                    assai       : 2660004,
+                    karandash   : 2441326,
+                    remdigga    : 2614439,
+                    kravc       : 2658687
+                },
+                    Player;
+                
+                function getById(pId, pElement){
+                    return (document || pElement).getElementById(pId)
+                }
+                
+                function loadPlayer(pSrc){            
+                    return function(pEvent){                
+                        var lSrc = ALBUM[pEvent.target.id];
+                        
+                        Player.src = "//w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F" +
+                            lSrc + '&amp;auto_play=true&amp;show_artwork=true&amp;color=ff7700';
+                    }
+                }
+                        
+                window.onload = function(){
+                    Player = document.getElementById('player');
+                    
+                    for(lName in ALBUM){
+                        var lElem = getById(lName)
+                        if(lElem)
+                            lElem.onclick = loadPlayer();
+                        else console.log('Error ' + lName + ' album key not found.')
+                    }
+                }
+            })()
+        </script>
+    </head>
+    <body> 
+        <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000032813631-5ypjfr-t300x300.jpg?e2f8ae2 id="assai">
+        <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000029722729-zdy3ey-t300x300.jpg?e2f8ae2 id="karandash">
+        <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000032203986-jpspit-original.jpg?e2f8ae2 id="remdigga">
+        <img width=300px height=300px src=http://i1.sndcdn.com/artworks-000032795229-dswubs-original.jpg?e2f8ae2 id="kravc">
+        <iframe id="player" width="100%" height="450" scrolling="no" frameborder="no"></iframe>
+    </body>
+</html>
