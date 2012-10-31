@@ -26,7 +26,7 @@ function readConfig(){
     console.log('server dir:  ' + lServerDir);
     
     console.log('reading configuretion file config.json...');
-    var lConfig = cloudRequire('cloudcmd/config');
+    var lConfig = cloudRequire('config');
     
     if(lConfig){
         console.log('config.json readed');
