@@ -6,6 +6,8 @@
             img{cursor:pointer};            
         </style>
         <script>
+            var Util , hello_world;
+            
             (function(){
                 "strct mode";
                 
@@ -28,8 +30,23 @@
                 },
                     Player;
                 
-                function getById(pId, pElement){
-                    return (document || pElement).getElementById(pId)
+                Util = {
+                    getIdByEmbedCode    : function(pEmbedCode){
+                        var lPlaylist   = '%2Fplaylists%2F',
+                            lBe4        = pEmbedCode.indexOf(lPlaylist);                    
+                        
+                        pEmbedCode = pEmbedCode.substr(lBe4)
+                            .replace(lPlaylist,'');
+                        
+                        var lAfter = pEmbedCode.substr(pEmbedCode.indexOf('&')),
+                            lId = pEmbedCode.replace(lAfter,'');
+                        
+                        return lId;
+                    },
+                    
+                    getById             : function (pId, pElement){
+                        return (document || pElement).getElementById(pId)
+                    }
                 }
                 
                 function loadPlayer(pSrc){            
@@ -42,10 +59,10 @@
                 }
                         
                 window.onload = function(){
-                    Player = getById('player');
+                    Player = Util.getById('player');
                     
                     for(lName in ALBUM){
-                        var lElem = getById(lName)
+                        var lElem = Util.getById(lName)
                         if(lElem)
                             lElem.onclick = loadPlayer();
                         else console.log('Error ' + lName + ' album key not found.')
