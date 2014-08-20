@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Click 2 play</title>        
+        <title>Click 2 play</title>
         <style>
-            img{cursor:pointer};            
+            img{cursor:pointer};
         </style>
         <script>
             var Util , ALBUM;
@@ -34,7 +34,7 @@
                 Util = {
                     getIdByEmbedCode    : function(pEmbedCode){
                         var lPlaylist   = '%2Fplaylists%2F',
-                            lBe4        = pEmbedCode.indexOf(lPlaylist);                    
+                            lBe4        = pEmbedCode.indexOf(lPlaylist);
                         
                         pEmbedCode = pEmbedCode.substr(lBe4)
                             .replace(lPlaylist,'');
@@ -73,7 +73,7 @@
         </script>
     </head>
     <body> 
-        <div class=covers></div>
+        <div class=covers>{{ albums }}</div>
         <iframe id="player" width="100%" height="450" scrolling="no" frameborder="no"></iframe>
     </body>
 </html>

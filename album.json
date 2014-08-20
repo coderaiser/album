@@ -21,7 +21,7 @@
 	},
 	"Danger Mouse - Grey Album": {
 		"id": 571950,
-		"cover": "//static.mixstream.com/mixstream/wp-content/uploads/2011/09/GreyAlbum-1.jpg"
+		"cover": "//i.imgur.com/jqOoZ.gif"
 	},
 	"karandash": {
 		"id": 2441326,
@@ -40,10 +40,10 @@
 		"cover": "//i1.sndcdn.com/artworks-000032203986-jpspit-original.jpg?e2f8ae2"
 	},
 	"robot_koch_the_other_side": {
-		"id": 1234248,
-		"cover": "//f0.bcbits.com/z/24/96/2496549360-1.jpg"
-	},
-	"kravc": {
+        "id": 1234248,
+        "cover": "//i1.sndcdn.com/artworks-000065850299-1z060m-t200x200.jpg"
+    }, 
+    "kravc": {
 	    "id": 2658687,
 		"cover": "//i1.sndcdn.com/artworks-000032795229-dswubs-original.jpg?e2f8ae2"
 	},
