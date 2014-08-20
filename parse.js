@@ -1,19 +1,18 @@
 /**
  * function generate html with images
  */
-exports.generateImgHTML = function(pAlbum){
-    var lName,
-        lSrc,
-        lOutput ='',
-        lSize   = '300';
+exports.generateImgHTML = function(album){
+    var src,
+        ret     ='',
+        size    = '300';
     
-    for(lName in pAlbum){
-        lSrc = pAlbum[lName].cover,            
-        lOutput += '<img' + getSizeParams(lSize) + 
-            'src=' + lSrc + genAllParams(lName) + '>';
-    }
+    Object.keys(album).forEach(function(name) {
+        src     = album[name].cover;
+        ret     += '<img'   + getSizeParams(size)         + 
+                    'src='  + src + genAllParams(name)  + '>';
+    });
     
-    return lOutput;
+    return ret;
 };
 
 /**
