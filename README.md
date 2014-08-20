@@ -16,7 +16,7 @@ npm install
 ```
 node bin/album
 ```
-Open browser url `http://0.0.0.0:1337`.
+Open browser url `http://localhost:1337`.
 
 ## License
 
