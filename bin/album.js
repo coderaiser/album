@@ -7,6 +7,8 @@
         http        = require('http'),
         
         express     = require('express'),
+        minify      = require('minify'),
+        
         Util        = require('util-io'),
         
         DIR         = __dirname + '/../',
@@ -39,7 +41,10 @@
             });
         });
         
-        app.use(express.static(DIR));
+        app.use(minify({
+                dir: DIR
+            }))
+           .use(express.static(DIR));
         
         server.listen(port, ip);
         console.log('url: http://' + ip + ':' + port);

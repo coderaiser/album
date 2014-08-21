@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "express": "~4.8.5",
+    "minify": "~1.0.0",
     "util-io": "~1.2.4"
   },
   "license": "MIT"
