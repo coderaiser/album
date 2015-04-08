@@ -46,5 +46,5 @@
            .use(express.static(DIR));
         
         server.listen(port, ip);
-        console.log('url: http://' + ip + ':' + port);
+        console.log('url: http://%s:%d', ip, port);
 })();
