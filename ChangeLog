@@ -1,5 +1,15 @@
 2015.04.08, v0.4.0
 
+fix:
+- (package) repository: cloudcmd -> coderaiser
+
+feature:
+- (package) v0.4.0
+- (package) minify -> mollify
+
+
+2015.04.08, v0.4.0
+
 feature:
 - (package) minify -> mollify
 
