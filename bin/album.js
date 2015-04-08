@@ -7,7 +7,7 @@
         http        = require('http'),
         
         express     = require('express'),
-        minify      = require('minify'),
+        mollify     = require('mollify'),
         rendy       = require('rendy'),
         
         DIR         = __dirname + '/../',
@@ -40,7 +40,7 @@
             });
         });
         
-        app.use(minify({
+        app.use(mollify({
                 dir: DIR
             }))
            .use(express.static(DIR));

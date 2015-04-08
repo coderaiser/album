@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "express": "~4.8.5",
-    "minify": "~1.0.0",
+    "mollify": "~1.0.4",
     "rendy": "~1.0.6"
   },
   "license": "MIT"
