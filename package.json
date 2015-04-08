@@ -1,7 +1,7 @@
 {
   "name": "album",
   "private": true,
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "coderaiser <mnemonic.enemy@gmail.com> (https://github.com/coderaiser)",
   "description": "Album",
   "bin": {
