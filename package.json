@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/cloudcmd/album.git"
+    "url": "git://github.com/coderaiser/album.git"
   },
   "dependencies": {
     "express": "~4.8.5",
