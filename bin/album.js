@@ -8,8 +8,7 @@
         
         express     = require('express'),
         minify      = require('minify'),
-        
-        Util        = require('util-io'),
+        rendy       = require('rendy'),
         
         DIR         = __dirname + '/../',
         
@@ -35,7 +34,7 @@
                 if (error)
                     res.status(404).send(error.message);
                 else
-                    res.send(Util.render(data, {
+                    res.send(rendy(data, {
                         albums: albums
                     }));
             });
